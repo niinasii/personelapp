@@ -1,0 +1,11 @@
+<h3>Muokkaa tietoja</h3>
+<h4>ID: {{personid}}</h4>
+<section *ngIf=person>
+<fieldset>
+    <table>
+        <tr><td>Nimi:</td><td><input placeholder="Henkilön nimi"  [(ngModel)]=person.name ></td></tr>
+        <tr><td>Email:</td><td><input placeholder="Henkilön email"  [(ngModel)]=person.email ></td></tr>
+    </table>
+</fieldset>
+    <button  class="nappi" (click)=update()>Päivitä</button>
+</section>

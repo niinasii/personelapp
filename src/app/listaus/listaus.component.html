@@ -1,0 +1,9 @@
+<h3>Henkilöstö</h3>
+<section class="personellist">
+<div *ngFor="let p of personellist" (click)="onSelect(p)">
+    <div class="item">{{p.name}}<button class="btn" routerLink="/muokkaa/{{p.id}}">✎</button>
+    </div> 
+</div>
+</section>
+<app-details [person]=selectedPerson (deleteEvent)="update()" *ngIf="selectedPerson"></app-details>
+{{errorMessage}}
